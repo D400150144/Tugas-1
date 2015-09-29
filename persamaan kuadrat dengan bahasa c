@@ -1,0 +1,28 @@
+#include <iostream.h>
+#include <math.h>
+main() {
+   int   A, B, C;     
+   long  disk;        
+   float x1, x2;     
+     cout << "Koefisien pangkat 0   : "; cin >> A;
+     cout << "Koefisien pangkat 1   : "; cin >> B;
+     cout << "Koefisien pangkat 2   : "; cin >> C;
+     if (A == 0) {
+        cout << "bukan pers. kuadrat.\n";
+        cout << "Harga akar = " << -C/B; }  else {
+          disk = B*B - 4*A*C;
+          if (disk > 0) {     
+             x1 = -B+sqrt(disk)/(2*A);
+             x2 = -B-sqrt(disk)/(2*A);
+             cout << "diskriminan = " << disk << endl;
+             cout << "x1 = " << x1 << endl;
+             cout << "x2 = " << x2 << endl;
+          }  else if (disk == 0) { 
+                     x1 = -B/(2*A);   x2 = x1;
+             cout << "diskriminan = 0\n";
+             cout << "x1 = " << x1 << endl;
+             cout << "x2 = " << x2 << endl;
+             } else cout << "Akar imajiner";
+     }
+     return 0;
+}
